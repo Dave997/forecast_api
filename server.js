@@ -9,7 +9,7 @@
 
 var http = require('http');
 var https = require('https');
-var port = 3000;
+const PORT = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
@@ -210,7 +210,7 @@ server.listen(port);
 */
 
 // Running Server Details.
-var server = app.listen(3000, function () {
+var server = app.listen(PORT, function () {
       var host = server.address().address
       var port = server.address().port
       console.log("Forecast app listening at %s:%s Port", host, port)
